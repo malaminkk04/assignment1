@@ -8,16 +8,24 @@
 </head>
 <body>
     <div class="login-container">
+        <img id="logo" src="img/tuLogo.png" alt="TU Logo"> <!-- Add the logo here -->
         <h1>Login</h1>
         <form id="loginForm">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
+            <select class="dropdown-field" id="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="Student">Student</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Admin">Admin</option>
+            </select>
             <button type="button" onclick="submitLogin()">Login</button>
-            <button type="button" onclick="call_REST_API_Hello()">Hello</button>
         </form>
-        <p id="message"></p>
+        <button type="button" onclick="requestForm()">Request Form</button>
+        
+        <div class="massage" id="massage"></div>
     </div>
     <script src="js/script.js"></script>
 </body>

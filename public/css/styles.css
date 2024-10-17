@@ -1,6 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: Courier, monospace; /* Use Courier for the entire web */
+    background-image: url ('img/tuphoto.jpg');
+    background-size: cover;
 }
 
 .login-container {
@@ -8,7 +9,7 @@ body {
     margin: 100px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 15px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -44,4 +45,10 @@ button:hover {
 #message {
     margin-top: 20px;
     text-align: center;
+}
+
+#logo {
+    display: block;
+    margin: 0 auto 10px;
+    width: 80%; /* Adjust as needed */
 }
