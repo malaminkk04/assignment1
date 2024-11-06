@@ -2,59 +2,69 @@ body {
     font-family: 'Times New Roman', Times, serif; /* ใช้ฟอนต์ Roman ทั้งเว็บ */
     margin: 0;
     padding: 0;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ทำให้กล่องล็อกอินอยู่กลางหน้าจอ */
     background: radial-gradient(circle, yellow, red); /* ไล่สีจากเหลืองไปแดง */
 }
 
 .login-container {
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
+    width: 320px;
+    padding: 25px;
     background-color: rgba(255, 255, 255, 0.9); /* สีขาวโปร่งใส */
     border-radius: 15px; /* มุมมน */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative; /* ให้แน่ใจว่ากล่องล็อกอินอยู่เหนือพื้นหลัง */
-    z-index: 1; /* ทำให้แน่ใจว่ากล่องล็อกอินอยู่ด้านบน */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้กล่องล็อกอิน */
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
 }
+
 .request-form {
-    text-align: center;
-    margin-bottom: 20px; /* เพิ่มระยะห่างใต้ข้อความ REQUEST FORM */
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: #555;
+    margin-bottom: 20px; /* เพิ่มระยะห่างใต้ข้อความ REQUEST FORM */
 }
 
 /* ทำให้กรอบของ input และ select มีมุมมน */
 input, select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     border-radius: 10px; /* มุมมน */
     border: 1px solid #ccc; /* สีกรอบ */
     margin-bottom: 15px; /* ระยะห่างระหว่างแต่ละช่อง */
     box-sizing: border-box; /* เพื่อให้ขนาดกรอบรวม padding */
+    font-size: 16px;
 }
 
 /* สไตล์ของ label */
 label {
-    display: block;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
     margin: 10px 0 5px;
+    display: inline-block;
+    width: 100%;
 }
 
 /* ทำให้ปุ่ม login มีมุมมน */
 button {
     width: 100%;
-    padding: 10px;
-    background-color: black;
+    padding: 12px;
+    background-color: #333;
     border: none;
     color: #fff;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
     border-radius: 10px; /* มุมมน */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ปุ่ม */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้ปุ่ม */
+    transition: background-color 0.3s; /* ทำให้ปุ่มเปลี่ยนสีลื่นขึ้น */
 }
 
 button:hover {
@@ -64,6 +74,15 @@ button:hover {
 /* สไตล์ของโลโก้ */
 #logo {
     display: block;
-    margin: 0 auto 10px;
-    width: 80%; /* ปรับขนาดโลโก้ตามต้องการ */
+    margin: 0 auto 15px;
+    width: 60%; /* ปรับขนาดโลโก้ให้เหมาะสม */
+}
+
+/* สไตล์ของข้อความแสดงผลลัพธ์ */
+#message {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
 }
